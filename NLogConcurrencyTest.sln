@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogConcurrencyTest", "NLogConcurrencyTest\NLogConcurrencyTest.csproj", "{B875C3E9-2F4D-4D62-8367-BA6DCD4C7BDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogRunner", "LogRunner\LogRunner.csproj", "{8FA6D509-6935-4ACD-848E-60D0E87008CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B875C3E9-2F4D-4D62-8367-BA6DCD4C7BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B875C3E9-2F4D-4D62-8367-BA6DCD4C7BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B875C3E9-2F4D-4D62-8367-BA6DCD4C7BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B875C3E9-2F4D-4D62-8367-BA6DCD4C7BDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA6D509-6935-4ACD-848E-60D0E87008CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA6D509-6935-4ACD-848E-60D0E87008CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA6D509-6935-4ACD-848E-60D0E87008CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA6D509-6935-4ACD-848E-60D0E87008CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
