@@ -2,30 +2,32 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NLogConcurrencyTest
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			if (File.Exists("log.txt"))
-				File.Delete("log.txt");
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            if (File.Exists("log.txt"))
+                File.Delete("log.txt");
 
-			List<Process> processes = new List<Process>();
-			for (int i = 0; i < 3; i++)
-			{
-				var process = Process.Start(new ProcessStartInfo(typeof(LogRunner.Program).Assembly.Location));
-				processes.Add(process);
-			}
+            var start = DateTime.Now;
 
-			foreach (var nextProcess in processes)
-				nextProcess.WaitForExit();
+            List<Process> processes = new List<Process>();
+            for (int i = 0; i < 5; i++)
+            {
+                var process = Process.Start(new ProcessStartInfo(typeof(LogRunner.Program).Assembly.Location));
+                processes.Add(process);
+            }
 
-			// There should be exactly 300 lines in the file.
-		}
-	}
+            foreach (var nextProcess in processes)
+                nextProcess.WaitForExit();
+
+            Console.WriteLine("Duration: " + (DateTime.Now - start));
+            Console.ReadLine();
+
+            // There should be exactly 5000 lines in the file.
+        }
+    }
 }
